@@ -1,0 +1,170 @@
+h1,h2,h3,h4{
+ font-family:"Playfair Display"; 
+  color:DimGray;
+}
+
+p{
+  font-family:'Libre Baskerville';
+  font-size:14px;
+  color:DimGray;
+  line-height: 1.6rem;
+}
+
+h1{
+  font-weight:400;
+  font-size: 52px;
+  text-align:center;
+  color: white;
+  margin-bottom:20px;
+}
+
+h4{
+  text-transform:uppercase;
+  font-size:14px;
+  text-align:center;
+  color:white;
+  margin-bottom:30px;
+}
+
+h2{
+  font-size:36px;
+  color:DimGray;
+  margin-bottom:30px; 
+}
+
+.container{
+  padding:5% 0;
+}
+
+/*HERO HEADER*/
+#header{
+  height:450px;
+  width:auto;
+  background-image: url('https://static.pexels.com/photos/216916/pexels-photo-216916.jpeg');
+  background-size:cover;
+}
+
+.date{
+  font-family:"Playfair Display";
+  text-align:center;
+  font-size:30px;
+  letter-spacing:3px;
+  color:white;
+}
+
+#hero-text{
+  padding:10% 0;
+}
+
+/*NAVIGATION MENU*/
+#menu{
+  background:white;
+}
+
+#menu a{
+  color: Olive;
+  font-family:"Playfair Display";
+}
+
+#menu a:hover{
+  border-bottom: solid 2px Olive;
+}
+
+/*OUR STORY*/
+
+#story p span{
+  font-size:16px;
+  line-height: 1.6rem;
+}
+
+.container img{
+  width:100%;
+  height:auto;
+}
+
+#story #signature{
+  font-family:"Playfair Display";
+  font-size:20px; 
+  padding-top:20px;
+}
+
+/*SAVE THE DATE*/
+
+#clockdiv h2{
+  color: RosyBrown;
+  font-size:52px;
+}
+
+#reminder{
+  background: AntiqueWhite;
+}
+
+#clockdiv{
+  padding:5% 0 2% 0;
+  text-align:center;
+  font-family:"Playfair Display";
+  font-size: 24px; 
+  color: RosyBrown;
+}
+
+#clockdiv div{
+  display:inline-block;
+  margin:10px;
+}
+
+#clockdiv div span{
+  display:inline-block;
+}
+
+#clockdiv h4{
+  color:RosyBrown;
+}
+
+.wed-date{
+  font-size:48px;
+}
+
+.btn-primary{
+  background:RosyBrown;
+  color: white;
+  font-family:"Playfair Display";
+  font-size:18px;
+  font-weight:400;
+  border:none;
+  margin-left:40%;
+  margin-bottom:5%;
+}
+
+.btn-primary:hover{
+  background:DarkKhaki;
+}
+
+/*THE WEDDING*/
+#event-info h4{
+  color:DimGray;
+  text-align:left;
+  margin:2% 0;
+}
+
+/*FOOTER*/
+footer{
+  background-color: DimGray;
+}
+
+footer .container{
+  padding: 1%;
+}
+
+footer p{
+  color:#ffffff;
+  text-align:center;
+  font-family:"Playfair Display";
+  font-weight: 200;
+  font-size:14px;
+  margin-top:10px;
+}
+
+.fa-heart{
+  color:PaleVioletRed;
+  margin: 0 5px 0 5px;
+}
