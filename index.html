@@ -1,99 +1,174 @@
-<div id="header" class="container-fluid">
-  <div id="hero-text" class="container">
-    <h4>You're invited to...</h4>
-    <h1>Cristina & Daniel's Wedding</h1>
-    <p class="date">22/06/2017</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herika & Luis</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
 
-  <ul id="menu" class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link" href="#our-story">Our Love Story</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#event-info">The Wedding</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#reminder">Save Your Spot</a>
-  </li>
-</ul>
-  
-<div id="our-story" class="container-fluid">
-  <div id="story" class="container">
-    <div class="row">
-      <div class="col">
-        <img src="https://static.pexels.com/photos/236287/pexels-photo-236287.jpeg">
+<body>
+  <div id="invite-overlay" class="invite-overlay" role="dialog" aria-modal="true" aria-label="Convite especial">
+    <div id="invite-envelope" class="invite-envelope" tabindex="0" role="button" aria-label="Abrir convite">
+      <div class="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body"></div>
       </div>
-      <div class="col">
-        <h2>Our Love Story</h2>
-        <p><span><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></span></p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <p id="signature">Cristina & Daniel</p>
+      <div class="invite-copy">
+        <h2>Você recebeu um convite<br>muito especial</h2>
+        <p>Herika &amp; Luis</p>
       </div>
     </div>
   </div>
- 
-  
-  
-  <div id="reminder" class="container-fluid">
-  <div id="clockdiv" class="container">
-    <h4>Save the date!</h4>
-    <h2>22/06/2017</h2>
-    <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
-    </div>
-    
-    <div>
-    <span class="hours"></span>
-    <div class="smalltext">Hours</div>
-    </div>
-    
-    <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-    </div>
-  
-    <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
-    </div>
-   </div>
-    
-    <button type="button" role="button" class="btn btn-primary btn-lg">Confirm Your Assistance</button>
-    
- </div>
-</div>
 
-<div class="container-fluid">
-  <div  id="event-info" class="container">
-    <div class="row">
-      <div class="col">
-        <h2>The Wedding</h2>
-        <h4>When</h4>
-        <h3>Date & Time</h3>
-        <p>June 23rd 2017 at 1.00 pm</p>
-        <hr>
-        <h4>Where</h4>
-        <h3>Place</h3>
-        <p>UMD Memorial Chapel, 7600<br>Baltimore Ave, College Park, MD 20740</p>
-        <hr>
-        <h4>How to get there</h4>
-        <h3>Directions</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <hr>
+  <main id="site-content" class="site-content">
+    <header id="header" class="container-fluid">
+      <div id="hero-text" class="container">
+        <h4>Você está convidado para o nosso casamento</h4>
+        <h1>Herika & Luis</h1>
+        <p class="date">07/11/2026</p>
       </div>
-      <div class="col">
-        <img src="https://static.pexels.com/photos/35160/pexels-photo.jpg" alt="wedding">
+    </header>
+
+    <nav id="main-nav">
+      <ul id="menu" class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#our-story">Nossa História</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reminder">Confirmar presença</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#event-info">O Casamento</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="our-story" class="container-fluid">
+      <div id="story" class="container">
+        <div class="row">
+          <div class="col">
+            <img src="assests/WhatsApp Image 2026-04-20 at 08.12.36.jpeg" alt="Foto da nossa história" class="responsive-photo">
+          </div>
+          <div class="col">
+            <h2>Nossa História</h2>
+            <p><span><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i></span></p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p id="signature">Herika & Luis</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<footer class="container-fluid">
-  <div class="container">
-    <p><i class="fa fa-heart" aria-hidden="true"></i>We're getting married<i class="fa fa-heart" aria-hidden="true"></i></p>
-<p>Cristina Estrod  2017. All Rights Reserved.</p>
-  </div>
-</footer>
+    </section>
 
+    <section id="reminder" class="container-fluid">
+      <div id="clockdiv" class="container">
+        <h4>Guarde a data!</h4>
+        <h2>07/11/2026</h2>
+        <div>
+            <span class="days"></span>
+            <div class="smalltext">Dias</div>
+          </div>
 
+          <div>
+            <span class="hours"></span>
+            <div class="smalltext">Horas</div>
+          </div>
+
+          <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Minutos</div>
+          </div>
+
+          <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Segundos</div>
+          </div>
+      </div>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxe3CghEF3i04pEdtZzQXXMD125n6gfkZMVNjNbPE_JzwS-g/viewform?usp=publish-editor" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Confirmar presença</a>
+    </section>
+
+    <section id="event-info" class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>The Wedding</h2>
+            <h4>Quando</h4>
+            <h3>Data & Hora</h3>
+            <p>07/11/2026 - 16:00</p>
+            <hr>
+            <h4>Onde</h4>
+            <h3>Local</h3>
+            <p>Restaurante e Vinícola Casagrande</p>
+            <hr>
+            <h4>Como chegar</h4>
+            <h3>Direções</h3>
+            <p>
+              Nossa celebração será na Vinícola Casa Grande, localizada no bairro Rocinha, em Lençóis Paulista (SP), às margens da Rodovia Osny Mateus (SP-261), km 111,8.
+              Para ver o endereço exato e obter rotas no seu celular, abra no Google Maps: <a href="https://maps.app.goo.gl/ycXAcTo7pqRdqnYE9" target="_blank" rel="noopener">Ver no Google Maps</a>.
+              Como alternativa, pesquise "Vinícola Casa Grande" no Google Maps ou Waze e siga a rota até o local. Esperamos vocês!
+            </p>
+            <hr>
+          </div>
+          <div class="col">
+            <img src="assests/WhatsApp Image 2026-04-20 at 08.12.44.jpeg" alt="Foto do casamento" class="responsive-photo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gifts" class="container-fluid gifts-section">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Presentes & Mensagens</h2>
+            <p>A sua presença já é o maior presente para nós, mas se quiser deixar um carinho adicional, aqui estão opções para presentear de forma elegante e prática.</p>
+            <div class="gift-options">
+              <div class="gift-card">
+                <h4>PIX</h4>
+                <p>Para uma contribuição rápida, pode usar a chave PIX abaixo ou copiar com o botão.</p>
+                <div class="input-copy">
+                  <input id="pix-value" type="text" value="77ddb2b5-ee58-4130-a65b-f61420b1caad" aria-label="PIX" readonly>
+                  <button class="copy-btn" data-copy-target="pix-value" type="button">Copiar</button>
+                </div>
+              </div>
+              <div class="gift-card">
+                <h4>IBAN</h4>
+                <p>Para transferências bancárias na Europa, pode utilizar o IBAN abaixo ou copiar com o botão.</p>
+                <div class="input-copy">
+                  <input id="iban-value" type="text" value="BE38967863941172" aria-label="IBAN" readonly>
+                  <button class="copy-btn" data-copy-target="iban-value" type="button">Copiar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h3>Deixe uma mensagem para os noivos</h3>
+            <form id="message-form" class="message-form">
+              <label for="guest-name">Seu nome</label>
+              <input id="guest-name" name="guest-name" type="text" placeholder="Seu nome" required>
+
+              <label for="guest-message">Mensagem</label>
+              <textarea id="guest-message" name="guest-message" rows="6" placeholder="Escreva uma mensagem para o noivo" required></textarea>
+
+              <button type="submit" class="btn btn-primary btn-lg">Enviar mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container-fluid">
+      <div class="container">
+        <p><i class="fa fa-heart" aria-hidden="true"></i>Estamos nos casando<i class="fa fa-heart" aria-hidden="true"></i></p>
+        <p>Created by  @BistonN.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

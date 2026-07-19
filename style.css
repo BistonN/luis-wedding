@@ -1,3 +1,137 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: DimGray;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.site-content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+}
+
+.site-content.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.invite-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 250, 247, 0.98), rgba(240, 214, 205, 0.95));
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.invite-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.invite-envelope {
+  width: min(90vw, 480px);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.invite-envelope:hover {
+  transform: translateY(-6px);
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  perspective: 1000px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(127, 83, 73, 0.18);
+  background: #fffaf7;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(135deg, #8b6963, #8f5f57);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  box-shadow: inset 0 -12px 18px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.envelope-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52%;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: #fffaf7;
+  color: #7a5f4f;
+}
+
+.envelope-label {
+  font-family: "Playfair Display";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+
+.invite-copy {
+  margin-top: 1.5rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease 0.2s;
+}
+
+.invite-envelope.is-opening .invite-copy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.invite-copy h2 {
+  margin-bottom: 0.85rem;
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  color: #7a5f4f;
+}
+
+.invite-copy p {
+  margin: 0;
+  font-family: "Playfair Display";
+  font-size: 1.05rem;
+  color: #9c7365;
+}
+
 h1,h2,h3,h4{
  font-family:"Playfair Display"; 
   color:DimGray;
@@ -33,15 +167,17 @@ h2{
 }
 
 .container{
-  padding:5% 0;
+  padding: 0;
 }
 
 /*HERO HEADER*/
 #header{
   height:450px;
   width:auto;
-  background-image: url('https://static.pexels.com/photos/216916/pexels-photo-216916.jpeg');
+  background-image: url('assests/WhatsApp Image 2026-04-20 at 08.12.40.jpeg');
   background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .date{
@@ -59,15 +195,28 @@ h2{
 /*NAVIGATION MENU*/
 #menu{
   background:white;
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  padding: 1rem 0;
+}
+
+#menu li{
+  list-style:none;
 }
 
 #menu a{
   color: Olive;
   font-family:"Playfair Display";
+  text-decoration:none;
 }
 
 #menu a:hover{
   border-bottom: solid 2px Olive;
+}
+
+section{
+  padding: 0;
 }
 
 /*OUR STORY*/
@@ -77,15 +226,47 @@ h2{
   line-height: 1.6rem;
 }
 
-.container img{
+#story .row,
+#event-info .row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+}
+
+#story .col,
+#event-info .col{
+  flex:1 1 45%;
+  min-width:280px;
+  padding: 0 1.25rem;
+}
+
+#story .col > *,
+#event-info .col > * {
+  margin-bottom: 1rem;
+}
+
+.container img,
+#story img,
+#event-info img{
   width:100%;
   height:auto;
+  border:none;
 }
 
 #story #signature{
   font-family:"Playfair Display";
   font-size:20px; 
   padding-top:20px;
+}
+
+img.responsive-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
 }
 
 /*SAVE THE DATE*/
@@ -131,8 +312,11 @@ h2{
   font-size:18px;
   font-weight:400;
   border:none;
-  margin-left:40%;
-  margin-bottom:5%;
+  display: block;
+  width: max-content;
+  margin: 1.5rem auto 3rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
 }
 
 .btn-primary:hover{
@@ -144,6 +328,118 @@ h2{
   color:DimGray;
   text-align:left;
   margin:2% 0;
+}
+
+/*GIFTS AND MESSAGES*/
+.gifts-section {
+  background: AntiqueWhite;
+  padding: 5% 0;
+}
+
+.gifts-section .row {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:2rem;
+}
+
+.gifts-section .col {
+  flex:1 1 45%;
+  min-width:280px;
+  padding: 0 1.25rem;
+}
+
+.gift-options {
+  display:grid;
+  gap:1rem;
+  margin-top:1.5rem;
+}
+
+.gift-card {
+  background:#fffaf7;
+  padding:1.25rem;
+  border-radius:14px;
+  box-shadow:0 10px 24px rgba(127, 83, 73, 0.12);
+}
+
+.gift-card h4 {
+  color:RosyBrown;
+  text-align:left;
+  margin:0 0 0.5rem 0;
+}
+
+.gift-card p {
+  margin:0 0 0.75rem 0;
+}
+
+.message-form {
+  display:flex;
+  flex-direction:column;
+  gap:0.75rem;
+  background:#fffaf7;
+  padding:1.5rem;
+  border-radius:14px;
+  box-shadow:0 10px 24px rgba(127, 83, 73, 0.12);
+}
+
+.message-form label {
+  font-family:"Playfair Display";
+  color:DimGray;
+  font-weight:600;
+}
+
+.message-form input,
+.message-form textarea {
+  width:100%;
+  padding:0.85rem 1rem;
+  border:1px solid rgba(127, 83, 73, 0.2);
+  border-radius:10px;
+  font-family:'Montserrat', sans-serif;
+  font-size:0.95rem;
+  color:DimGray;
+}
+
+.message-form textarea {
+  resize:vertical;
+  min-height:140px;
+}
+
+.message-form .btn-primary {
+  margin: 0.5rem 0 0 0;
+  width: fit-content;
+}
+
+.input-copy {
+  display:flex;
+  gap:0.5rem;
+  align-items:center;
+}
+
+.input-copy input {
+  flex:1 1 auto;
+  padding:0.75rem 1rem;
+  border-radius:10px;
+  border:1px solid rgba(127,83,73,0.14);
+  background:#fff;
+}
+
+.copy-btn {
+  background:RosyBrown;
+  color:white;
+  border:none;
+  padding:0.6rem 0.9rem;
+  border-radius:10px;
+  cursor:pointer;
+  font-family: "Playfair Display";
+}
+
+.copy-btn:hover { background:DarkKhaki; }
+
+@media (max-width: 640px) {
+  .invite-envelope { width: 85vw; }
+  .input-copy { flex-direction:column; align-items:stretch; }
+  .copy-btn { width:100%; }
 }
 
 /*FOOTER*/
